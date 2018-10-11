@@ -5,6 +5,8 @@ import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.*;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
+import java.util.Scanner;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -37,8 +39,14 @@ public class CodeGenerator {
     private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());//@date
 
     public static void main(String[] args) {
-        genCode("user");
-        //genCodeByCustomModelName("输入表名","输入自定义Model名称");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("input your table name:");
+        while (scanner.hasNextLine()) {
+            String table = scanner.nextLine();
+            genCode(table);
+            //genCodeByCustomModelName("输入表名","输入自定义Model名称");
+        }
+        scanner.close();
     }
 
     /**
