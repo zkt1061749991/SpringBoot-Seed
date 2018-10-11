@@ -19,4 +19,8 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
     @Resource
     private UserMapper userMapper;
 
+    @Override
+    public User getUserByNickName(String nickName) {
+        return (User) userMapper.selectByCondition(nickName);
+    }
 }
