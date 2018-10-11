@@ -3,7 +3,7 @@ package com.xuanxuan.csu.core;
 import com.alibaba.fastjson.JSON;
 
 /**
- * 统一API响应结果封装
+ * 统一API响应结果封装(使用alibaba的fastjson库)
  */
 public class Result<T> {
     private int code;

@@ -12,8 +12,8 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Created by zhixuan chen on 2018/10/11.
- */
+* Created by zhixuan chen on 2018/10/11.
+*/
 @RestController
 @RequestMapping("/answer")
 public class AnswerController {
